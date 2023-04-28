@@ -8,7 +8,7 @@
     <link href="/2023/04/28/hexo%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E4%B8%8E%E9%A1%B5%E9%9D%A2/"/>
     <url>/2023/04/28/hexo%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0%E4%B8%8E%E9%A1%B5%E9%9D%A2/</url>
     
-    <content type="html"><![CDATA[<h2 id="npx-hexo-s-p-5555"><a href="#npx-hexo-s-p-5555" class="headerlink" title="npx hexo s -p 5555"></a>npx hexo s -p 5555</h2><p>打开本地服务器端口号为:5555 </p><h2 id="npx-hexo-g"><a href="#npx-hexo-g" class="headerlink" title="npx hexo g"></a>npx hexo g</h2><p>更新</p><h2 id="npx-hexo-d"><a href="#npx-hexo-d" class="headerlink" title="npx hexo d"></a>npx hexo d</h2><p>上传至github</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="npx-hexo-s-p-5555"><a href="#npx-hexo-s-p-5555" class="headerlink" title="npx hexo s -p 5555"></a>npx hexo s -p 5555</h2><span class="label label-primary">打开本地服务器端口号为:5555</span> <h2 id="npx-hexo-g"><a href="#npx-hexo-g" class="headerlink" title="npx hexo g"></a>npx hexo g</h2><span class="label label-primary">更新</span><h2 id="npx-hexo-d"><a href="#npx-hexo-d" class="headerlink" title="npx hexo d"></a>npx hexo d</h2><span class="label label-primary">上传至github</span>]]></content>
     
     
     <categories>
