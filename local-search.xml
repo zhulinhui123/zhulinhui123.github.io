@@ -4,6 +4,75 @@
   
   
   <entry>
+    <title>sprintf和sscanf</title>
+    <link href="/2023/05/07/sprintf%E5%92%8Csscanf%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/05/07/sprintf%E5%92%8Csscanf%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="sprintf"><a href="#sprintf" class="headerlink" title="sprintf()"></a>sprintf()</h3><blockquote><p>原型：sprintf(char* buf, char* format…)</p><p>功能：将格式化后的字符串输出到指定的缓冲区域</p><p>参数：参数一为缓存空间(一般为数组)，其余参数和printf()一致</p></blockquote><h3 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf()"></a>sscanf()</h3><blockquote><p>原型：int sscanf(char* buf, char* format…)</p><p>功能：从指定缓存区域读取指定格式的字符串</p><p>参数：参数一为缓存空间(一般为数组)，其余参数和scanf()一致</p></blockquote><p>###案例：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> <span class="hljs-keyword">warning</span>(disable:4996)</span><br><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">msg</span> &#123;</span><br><span class="hljs-type">char</span> name[<span class="hljs-number">20</span>];<br><span class="hljs-type">char</span> addr[<span class="hljs-number">20</span>];<br><span class="hljs-type">char</span> time[<span class="hljs-number">40</span>];<br><span class="hljs-type">char</span> text[<span class="hljs-number">40</span>];<br>&#125;;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> &#123;<br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">msg</span> <span class="hljs-title">message</span> =</span> &#123;<span class="hljs-string">&quot;zhulinhui&quot;</span>, <span class="hljs-string">&quot;JanSu&quot;</span>, <span class="hljs-string">&quot;2023-5-7-16:30&quot;</span>, <span class="hljs-string">&quot;Hello World&quot;</span>&#125;;<br><span class="hljs-type">char</span> buf[<span class="hljs-number">1024</span>];<br><span class="hljs-type">char</span>* p = <span class="hljs-literal">NULL</span>;<br><span class="hljs-type">char</span> app[<span class="hljs-number">40</span>];<br><span class="hljs-type">const</span> <span class="hljs-type">char</span>* table[<span class="hljs-number">4</span>] = &#123; <span class="hljs-string">&quot;[name]:&quot;</span>, <span class="hljs-string">&quot;[addr]:&quot;</span>, <span class="hljs-string">&quot;[time]:&quot;</span>, <span class="hljs-string">&quot;[text]:&quot;</span> &#125;;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;发送消息&quot;</span>);<br><span class="hljs-built_in">sprintf</span>(buf, <span class="hljs-string">&quot;[name]: %s\n[addr]: %s\n[time]: %s\n[text]: %s\n&quot;</span>, message.name, message.addr,<br>message.time, message.text);<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, buf);<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;解析消息&quot;</span>);<br><span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) &#123;<br>p = <span class="hljs-built_in">strstr</span>(buf, table[i]);<br>p += <span class="hljs-number">7</span>;<br><span class="hljs-keyword">if</span> (p) &#123;<br><span class="hljs-built_in">sscanf</span>(p, <span class="hljs-string">&quot;%s\n&quot;</span>, app);<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, app);<br>&#125;<br><span class="hljs-keyword">else</span> &#123;<br><span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>&#125;<br>i++;<br><span class="hljs-keyword">if</span> (i == <span class="hljs-number">4</span>) &#123;<br><span class="hljs-keyword">break</span>;<br>&#125;<br>&#125;<br><br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>函数使用</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>jupyter快捷键的使用</title>
+    <link href="/2023/04/30/jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+    <url>/2023/04/30/jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
+    
+    <content type="html"><![CDATA[<h4 id="shift-tab"><a href="#shift-tab" class="headerlink" title="shift + tab"></a>shift + tab</h4><blockquote><p>函数用法全都有，从此不用再百度</p></blockquote><h4 id="tab键，代码补全"><a href="#tab键，代码补全" class="headerlink" title="tab键，代码补全"></a>tab键，代码补全</h4><blockquote><p>敲完pd.qcu后，按tab键，就能补全pd.qcut</p></blockquote><h4 id="esc-后-b键"><a href="#esc-后-b键" class="headerlink" title="esc 后 b键"></a>esc 后 b键</h4><blockquote><p>在下方插入单元</p></blockquote><h4 id="esc-后-a键"><a href="#esc-后-a键" class="headerlink" title="esc 后 a键"></a>esc 后 a键</h4><blockquote><p>在上方插入单元</p></blockquote><h4 id="esc-后-m键"><a href="#esc-后-m键" class="headerlink" title="esc 后 m键"></a>esc 后 m键</h4><blockquote><p>进入markdown模式</p></blockquote><h4 id="esc后-y键"><a href="#esc后-y键" class="headerlink" title="esc后 y键"></a>esc后 y键</h4><blockquote><p>进入代码模式</p></blockquote><h4 id="esc-后-2次d键"><a href="#esc-后-2次d键" class="headerlink" title="esc 后 2次d键"></a>esc 后 2次d键</h4><blockquote><p>删除当前单元</p></blockquote><h4 id="esc-后-Z键"><a href="#esc-后-Z键" class="headerlink" title="esc 后 Z键"></a>esc 后 Z键</h4><blockquote><p>恢复删除的最后一个单元</p></blockquote><h4 id="ctrl-enter"><a href="#ctrl-enter" class="headerlink" title="ctrl + enter"></a>ctrl + enter</h4><blockquote><p>运行当前单元</p></blockquote><h4 id="alt-enter"><a href="#alt-enter" class="headerlink" title="alt + enter"></a>alt + enter</h4><blockquote><p>运行当前单元，并在下方插入一单元</p></blockquote><p>以上是使用jupyter中最常用的快捷键，其中esc是进入命令模式，进入命令模式后能够快读操作单元，例如像切换markdown、代码格式，快入插入、合并单元格等。其余是编辑模式下常用的快捷键，shift + tab键是能够帮助学习的，遇到不熟悉的函数，用这个快捷键能够很快get到用法，而其他的则能够大大提高效率。</p><p>另外：dir(对象)，能够返回对象的属性和方法。它虽然不是快捷键，但好用程度也能和快捷键相提并论了。这个方法能够返回对象的属性方法等，例如在想使用pandas进行等频分箱时，大概记得是cut方法，但不清楚时就可以用这个方法去找一找然后确认，有时候比翻文档和百度更高效。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>配置</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>opencv环境安装</title>
+    <link href="/2023/04/29/opencv%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/"/>
+    <url>/2023/04/29/opencv%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85/</url>
+    
+    <content type="html"><![CDATA[<h4 id="虚拟环境创建"><a href="#虚拟环境创建" class="headerlink" title="虚拟环境创建"></a>虚拟环境创建</h4><ul><li><span class="label label-primary">virtualenv venv</span></li></ul>]]></content>
+    
+    
+    <categories>
+      
+      <category>配置</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>opencv</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Markdown基础画图</title>
     <link href="/2023/04/29/Markdown%E5%9F%BA%E7%A1%80%E7%94%BB%E5%9B%BE/"/>
     <url>/2023/04/29/Markdown%E5%9F%BA%E7%A1%80%E7%94%BB%E5%9B%BE/</url>
