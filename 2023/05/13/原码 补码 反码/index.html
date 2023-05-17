@@ -16,22 +16,24 @@
   <meta name="author" content="zhulinhui123">
   <meta name="keywords" content="">
   
-    <meta name="description" content="sprintf() 原型：sprintf(char* buf, char* format…) 功能：将格式化后的字符串输出到指定的缓冲区域 参数：参数一为缓存空间(一般为数组)，其余参数和printf()一致  sscanf() 原型：int sscanf(char* buf, char* format…) 功能：从指定缓存区域读取指定格式的字符串 参数：参数一为缓存空间(一般为数组)，其余参数和">
+    <meta name="description" content="原码 补码 反码对于正数原码 &#x3D;&#x3D; 反码 &#x3D;&#x3D; 补码 对于负数机器上存储的是补码 反码 &#x3D;&#x3D; 原码将所有的数据为取反(符号位不动) 补码 &#x3D;&#x3D; 反码 + 1 举例说明，此时若想求 char x &#x3D; -10的三码： 原码：1000 1010 反码：1111 0101 补码：1111 0110 使用场合：对于负数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="sprintf和sscanf">
-<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/07/sprintf%E5%92%8Csscanf%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="原码 补码 反码">
+<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/13/%E5%8E%9F%E7%A0%81%20%E8%A1%A5%E7%A0%81%20%E5%8F%8D%E7%A0%81/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="sprintf() 原型：sprintf(char* buf, char* format…) 功能：将格式化后的字符串输出到指定的缓冲区域 参数：参数一为缓存空间(一般为数组)，其余参数和printf()一致  sscanf() 原型：int sscanf(char* buf, char* format…) 功能：从指定缓存区域读取指定格式的字符串 参数：参数一为缓存空间(一般为数组)，其余参数和">
+<meta property="og:description" content="原码 补码 反码对于正数原码 &#x3D;&#x3D; 反码 &#x3D;&#x3D; 补码 对于负数机器上存储的是补码 反码 &#x3D;&#x3D; 原码将所有的数据为取反(符号位不动) 补码 &#x3D;&#x3D; 反码 + 1 举例说明，此时若想求 char x &#x3D; -10的三码： 原码：1000 1010 反码：1111 0101 补码：1111 0110 使用场合：对于负数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-07T03:55:22.105Z">
-<meta property="article:modified_time" content="2023-05-07T11:10:00.491Z">
+<meta property="og:image" content="https://zhulinhui123.github.io/img/maple.jpeg">
+<meta property="article:published_time" content="2023-05-13T05:24:49.624Z">
+<meta property="article:modified_time" content="2023-05-13T05:28:17.403Z">
 <meta property="article:author" content="zhulinhui123">
-<meta property="article:tag" content="C">
+<meta property="article:tag" content="c">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://zhulinhui123.github.io/img/maple.jpeg">
   
   
   
-  <title>sprintf和sscanf - Hexo</title>
+  <title>原码 补码 反码 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -191,13 +193,13 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/paint.jpeg') no-repeat center center; background-size: cover;">
+     style="background: url('/img/maple.jpeg') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="sprintf和sscanf"></span>
+            <span id="subtitle" data-typed-text="原码 补码 反码"></span>
           
         </div>
 
@@ -208,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-07 11:55" pubdate>
-          2023年5月7日 中午
+        <time datetime="2023-05-13 13:24" pubdate>
+          2023年5月13日 下午
         </time>
       </span>
     
@@ -220,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          307 字
         
       </span>
     
@@ -231,7 +233,7 @@
         
         
         
-          10 分钟
+          3 分钟
         
       </span>
     
@@ -269,24 +271,24 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">sprintf和sscanf</h1>
+            <h1 style="display: none">原码 补码 反码</h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="sprintf"><a href="#sprintf" class="headerlink" title="sprintf()"></a>sprintf()</h3><blockquote>
-<p>原型：sprintf(char* buf, char* format…)</p>
-<p>功能：将格式化后的字符串输出到指定的缓冲区域</p>
-<p>参数：参数一为缓存空间(一般为数组)，其余参数和printf()一致</p>
-</blockquote>
-<h3 id="sscanf"><a href="#sscanf" class="headerlink" title="sscanf()"></a>sscanf()</h3><blockquote>
-<p>原型：int sscanf(char* buf, char* format…)</p>
-<p>功能：从指定缓存区域读取指定格式的字符串</p>
-<p>参数：参数一为缓存空间(一般为数组)，其余参数和scanf()一致</p>
-</blockquote>
-<p>###案例：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;string&gt;</span></span><br><br><span class="hljs-meta">#<span class="hljs-keyword">pragma</span> <span class="hljs-keyword">warning</span>(disable:4996)</span><br><br><span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">msg</span> &#123;</span><br>	<span class="hljs-type">char</span> name[<span class="hljs-number">20</span>];<br>	<span class="hljs-type">char</span> addr[<span class="hljs-number">20</span>];<br>	<span class="hljs-type">char</span> time[<span class="hljs-number">40</span>];<br>	<span class="hljs-type">char</span> text[<span class="hljs-number">40</span>];<br>&#125;;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span> &#123;<br>	<span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">msg</span> <span class="hljs-title">message</span> =</span> &#123;<span class="hljs-string">&quot;zhulinhui&quot;</span>, <span class="hljs-string">&quot;JanSu&quot;</span>, <span class="hljs-string">&quot;2023-5-7-16:30&quot;</span>, <span class="hljs-string">&quot;Hello World&quot;</span>&#125;;<br>	<span class="hljs-type">char</span> buf[<span class="hljs-number">1024</span>];<br>	<span class="hljs-type">char</span>* p = <span class="hljs-literal">NULL</span>;<br>	<span class="hljs-type">char</span> app[<span class="hljs-number">40</span>];<br>	<span class="hljs-type">const</span> <span class="hljs-type">char</span>* table[<span class="hljs-number">4</span>] = &#123; <span class="hljs-string">&quot;[name]:&quot;</span>, <span class="hljs-string">&quot;[addr]:&quot;</span>, <span class="hljs-string">&quot;[time]:&quot;</span>, <span class="hljs-string">&quot;[text]:&quot;</span> &#125;;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;发送消息&quot;</span>);<br>	<span class="hljs-built_in">sprintf</span>(buf, <span class="hljs-string">&quot;[name]: %s\n[addr]: %s\n[time]: %s\n[text]: %s\n&quot;</span>, message.name, message.addr,<br>		message.time, message.text);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s\n&quot;</span>, buf);<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;解析消息&quot;</span>);<br>	<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;<br>	<span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) &#123;<br>		p = <span class="hljs-built_in">strstr</span>(buf, table[i]);<br>		p += <span class="hljs-number">7</span>;<br>		<span class="hljs-keyword">if</span> (p) &#123;<br>			<span class="hljs-built_in">sscanf</span>(p, <span class="hljs-string">&quot;%s\n&quot;</span>, app);<br>			<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%s&quot;</span>, app);<br>		&#125;<br>		<span class="hljs-keyword">else</span> &#123;<br>			<span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;<br>		&#125;<br>		i++;<br>		<span class="hljs-keyword">if</span> (i == <span class="hljs-number">4</span>) &#123;<br>			<span class="hljs-keyword">break</span>;<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-
+                <h2 id="原码-补码-反码"><a href="#原码-补码-反码" class="headerlink" title="原码 补码 反码"></a>原码 补码 反码</h2><h3 id="对于正数"><a href="#对于正数" class="headerlink" title="对于正数"></a>对于正数</h3><p>原码 &#x3D;&#x3D; 反码 &#x3D;&#x3D; 补码</p>
+<h3 id="对于负数"><a href="#对于负数" class="headerlink" title="对于负数"></a>对于负数</h3><p>机器上存储的是补码</p>
+<p>反码 &#x3D;&#x3D; 原码将所有的数据为取反(符号位不动)</p>
+<p>补码 &#x3D;&#x3D; 反码 + 1</p>
+<p>举例说明，此时若想求 char x &#x3D; -10的三码：</p>
+<p>原码：1000 1010</p>
+<p>反码：1111 0101</p>
+<p>补码：1111 0110</p>
+<p>使用场合：对于负数，可以获取其二进制底层存储(补码)，但是仅从补码看不出具体数值</p>
+<p>​                   需要将补码补码转换得到原码，才能明确数值</p>
+<p>补码 -&gt; -1得到反码 -&gt; 除了最高位，依次取反，得到原码 -&gt;得到数值的绝对值</p>
+<h3 id="案例："><a href="#案例：" class="headerlink" title="案例："></a>案例：</h3><p>char a &#x3D; -10</p>
+<p>a &lt;&lt; 4 出错了，变成了正数</p>
 
                 
               </div>
@@ -305,7 +307,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%87%BD%E6%95%B0%E4%BD%BF%E7%94%A8/" class="category-chain-item">函数使用</a>
+  <a href="/categories/%E8%AF%AD%E6%B3%95/" class="category-chain-item">语法</a>
   
   
 
@@ -320,7 +322,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/C/">#C</a>
+        <a href="/tags/c/">#c</a>
       
     </div>
   
@@ -332,8 +334,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>sprintf和sscanf</div>
-      <div>https://zhulinhui123.github.io/2023/05/07/sprintf和sscanf的使用/</div>
+      <div>原码 补码 反码</div>
+      <div>https://zhulinhui123.github.io/2023/05/13/原码 补码 反码/</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +347,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月7日</div>
+          <div>2023年5月13日</div>
         </div>
       
       
@@ -377,9 +379,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/07/%E5%8F%AF%E9%87%8D%E5%85%A5%E5%87%BD%E6%95%B0/" title="可重入函数">
+                      <a href="/2023/05/17/chatgpt%E4%BD%BF%E7%94%A8/" title="chatgpt使用">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">可重入函数</span>
+                        <span class="hidden-mobile">chatgpt使用</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -387,8 +389,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/04/30/jupyter%E5%BF%AB%E6%8D%B7%E9%94%AE%E7%9A%84%E4%BD%BF%E7%94%A8/" title="jupyter快捷键的使用">
-                        <span class="hidden-mobile">jupyter快捷键的使用</span>
+                      <a href="/2023/05/07/%E5%8F%AF%E9%87%8D%E5%85%A5%E5%87%BD%E6%95%B0/" title="可重入函数">
+                        <span class="hidden-mobile">可重入函数</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
