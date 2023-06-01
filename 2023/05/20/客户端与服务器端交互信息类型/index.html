@@ -16,22 +16,24 @@
   <meta name="author" content="zhulinhui123">
   <meta name="keywords" content="">
   
-    <meta name="description" content="指针符号优先级 从变量名开始看, []的优先级大于*  12int* arr[4] &#x3D; &amp;#123;1, 2, 3, 4&amp;#125;; &#x2F;&#x2F;是一个有4个元素的数组，指向4个int型的指针int (* arr)[4]; &#x2F;&#x2F;整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关    指针自身类型 从语法的角度看，你只要把指针声明语句里的一个指针*和名字去掉，">
+    <meta name="description" content="应用层协议约定 1.注册消息 2.聊天记录 消息类型(1个字节).子消息类型(1个字节) 客户端与服务器端交互信息类型   编号 消息类型 消息子类型 简介    1 注册消息 0 用户注册向服务器发起注册   2 登陆认证消息 0 用户登陆认证消息   3 好友管理消息 好友状态查询 : 1好友列表请求: 2增加好友:3删除好友:4列出所有用户:5 查询好友是否在线客户端向服务器请求好友列表客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c指针">
-<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/17/%E6%8C%87%E9%92%88/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/20/%E5%AE%A2%E6%88%B7%E7%AB%AF%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%AB%AF%E4%BA%A4%E4%BA%92%E4%BF%A1%E6%81%AF%E7%B1%BB%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="指针符号优先级 从变量名开始看, []的优先级大于*  12int* arr[4] &#x3D; &amp;#123;1, 2, 3, 4&amp;#125;; &#x2F;&#x2F;是一个有4个元素的数组，指向4个int型的指针int (* arr)[4]; &#x2F;&#x2F;整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关    指针自身类型 从语法的角度看，你只要把指针声明语句里的一个指针*和名字去掉，">
+<meta property="og:description" content="应用层协议约定 1.注册消息 2.聊天记录 消息类型(1个字节).子消息类型(1个字节) 客户端与服务器端交互信息类型   编号 消息类型 消息子类型 简介    1 注册消息 0 用户注册向服务器发起注册   2 登陆认证消息 0 用户登陆认证消息   3 好友管理消息 好友状态查询 : 1好友列表请求: 2增加好友:3删除好友:4列出所有用户:5 查询好友是否在线客户端向服务器请求好友列表客">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-17T13:20:48.922Z">
-<meta property="article:modified_time" content="2023-05-17T15:18:38.844Z">
+<meta property="og:image" content="c:\Users\zhulinhui\Pictures\%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8D%8F%E8%AE%AE.jpg">
+<meta property="og:image" content="c:\Users\zhulinhui\Desktop\pro_photo\communciate\thread.jpg">
+<meta property="article:published_time" content="2023-05-20T14:59:30.443Z">
+<meta property="article:modified_time" content="2023-05-22T11:05:09.523Z">
 <meta property="article:author" content="zhulinhui123">
-<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\zhulinhui\Pictures\%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8D%8F%E8%AE%AE.jpg">
   
   
   
-  <title>c指针 - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="c指针"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -208,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-17 21:20" pubdate>
-          2023年5月17日 晚上
+        <time datetime="2023-05-20 22:59" pubdate>
+          2023年5月20日 晚上
         </time>
       </span>
     
@@ -220,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          381 字
+          369 字
         
       </span>
     
@@ -269,23 +271,67 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">c指针</h1>
+            <h1 style="display: none"></h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h4 id="符号优先级"><a href="#符号优先级" class="headerlink" title="符号优先级"></a>符号优先级</h4><blockquote>
-<p>从变量名开始看, []的优先级大于*</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span>* arr[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>&#125;; <span class="hljs-comment">//是一个有4个元素的数组，指向4个int型的指针</span><br><span class="hljs-type">int</span> (* arr)[<span class="hljs-number">4</span>]; <span class="hljs-comment">//整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关</span><br></code></pre></td></tr></table></figure>
+                <p><img src="C:\Users\zhulinhui\Pictures\服务器与客户端协议.jpg" srcset="/img/loading.gif" lazyload alt="服务器与客户端协议"></p>
+<p>应用层协议约定</p>
+<p>1.注册消息</p>
+<p>2.聊天记录</p>
+<p>消息类型(1个字节).子消息类型(1个字节)</p>
+<h3 id="客户端与服务器端交互信息类型"><a href="#客户端与服务器端交互信息类型" class="headerlink" title="客户端与服务器端交互信息类型"></a>客户端与服务器端交互信息类型</h3><table>
+<thead>
+<tr>
+<th>编号</th>
+<th>消息类型</th>
+<th>消息子类型</th>
+<th>简介</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>注册消息</td>
+<td>0</td>
+<td>用户注册向服务器发起注册</td>
+</tr>
+<tr>
+<td>2</td>
+<td>登陆认证消息</td>
+<td>0</td>
+<td>用户登陆认证消息</td>
+</tr>
+<tr>
+<td>3</td>
+<td>好友管理消息</td>
+<td>好友状态查询 : 1<br />好友列表请求: 2<br />增加好友:3<br />删除好友:4<br />列出所有用户:5</td>
+<td>查询好友是否在线<br />客户端向服务器请求好友列表<br />客户端向服务器增加好友<br />客户端向服务器删除好友<br />客户端向服务器请求列出所有用户信息</td>
+</tr>
+<tr>
+<td>4</td>
+<td>聊天信息</td>
+<td>0</td>
+<td>用户向其他用户发送聊天信息</td>
+</tr>
+<tr>
+<td>5</td>
+<td>退出登陆</td>
+<td>0</td>
+<td>用户向服务器发起退出登陆信息</td>
+</tr>
+</tbody></table>
+<h3 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-comment">/*实现通用消息结构*/</span><br><br><span class="hljs-keyword">typedef</span> <span class="hljs-class"><span class="hljs-keyword">struct</span> <span class="hljs-title">msg_header</span> &#123;</span><br>    <span class="hljs-type">unsigned</span> <span class="hljs-type">short</span> msg_type;<br>    <span class="hljs-type">unsigned</span> <span class="hljs-type">short</span> msg_len;<br>    <span class="hljs-type">char</span> msg_data[<span class="hljs-number">0</span>];<br>&#125;MSG_HDR;<br></code></pre></td></tr></table></figure>
 
 
 
-<h4 id="指针自身类型"><a href="#指针自身类型" class="headerlink" title="指针自身类型"></a>指针自身类型</h4><blockquote>
-<p>从语法的角度看，你只要把指针声明语句里的<span class="label label-warning">一个</span><span class="label label-primary">指针*</span>和<span class="label label-primary">名字</span>去掉，剩下的部分就是这个指针的类型：</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">(<span class="hljs-number">1</span>)<span class="hljs-type">int</span>* ptr; <span class="hljs-comment">//指针指向类型是int</span><br>(<span class="hljs-number">2</span>)<span class="hljs-type">char</span>* ptr; <span class="hljs-comment">//指针指向类型是char</span><br>(<span class="hljs-number">3</span>)<span class="hljs-type">int</span>** ptr; <span class="hljs-comment">//指针指向类型是int*</span><br>(<span class="hljs-number">4</span>)<span class="hljs-type">int</span> (* ptr)[<span class="hljs-number">3</span>]; <span class="hljs-comment">//指针自身类型为int(*)[3],指针指向类型是int()[3],定义的指针变量指向了int类型数组，数量为3</span><br>(<span class="hljs-number">5</span>)<span class="hljs-type">int</span>* (* ptr)[<span class="hljs-number">4</span>]; <span class="hljs-comment">//指针指向类型是int* ()[4]</span><br></code></pre></td></tr></table></figure>
 
+
+
+
+
+
+<p><img src="C:\Users\zhulinhui\Desktop\pro_photo\communciate\thread.jpg" srcset="/img/loading.gif" lazyload alt="thread"></p>
 
                 
               </div>
@@ -294,34 +340,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%AF%AD%E6%B3%95/" class="category-chain-item">语法</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/C/">#C</a>
-      
-    </div>
   
 </div>
 
@@ -331,8 +349,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>c指针</div>
-      <div>https://zhulinhui123.github.io/2023/05/17/指针/</div>
+      <div></div>
+      <div>https://zhulinhui123.github.io/2023/05/20/客户端与服务器端交互信息类型/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +362,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月17日</div>
+          <div>2023年5月20日</div>
         </div>
       
       
@@ -376,9 +394,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/17/c%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%80%81/" title="">
+                      <a href="/2023/05/22/socket/" title="socket">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">socket</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -386,8 +404,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/17/chatgpt%E4%BD%BF%E7%94%A8/" title="chatgpt使用">
-                        <span class="hidden-mobile">chatgpt使用</span>
+                      <a href="/2023/05/19/sprintf()%20%20%20%20%E7%A7%AF%E7%B4%AF%E4%BB%A3%E7%A0%81/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

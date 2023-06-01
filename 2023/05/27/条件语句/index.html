@@ -16,22 +16,23 @@
   <meta name="author" content="zhulinhui123">
   <meta name="keywords" content="">
   
-    <meta name="description" content="指针符号优先级 从变量名开始看, []的优先级大于*  12int* arr[4] &#x3D; &amp;#123;1, 2, 3, 4&amp;#125;; &#x2F;&#x2F;是一个有4个元素的数组，指向4个int型的指针int (* arr)[4]; &#x2F;&#x2F;整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关    指针自身类型 从语法的角度看，你只要把指针声明语句里的一个指针*和名字去掉，">
+    <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041void func9(void)&amp;#123;	int time &#x3D; 0 , dis &#x3D; 0 , mode &#x3D; 0;	double sum &#x3D; 0, km &#x3D; 0, qblc &#x3D; 0;	int qbjz &#x3D; 0;	printf(&quot;选择车型：普通">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c指针">
-<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/17/%E6%8C%87%E9%92%88/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="https://zhulinhui123.github.io/2023/05/27/%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="指针符号优先级 从变量名开始看, []的优先级大于*  12int* arr[4] &#x3D; &amp;#123;1, 2, 3, 4&amp;#125;; &#x2F;&#x2F;是一个有4个元素的数组，指向4个int型的指针int (* arr)[4]; &#x2F;&#x2F;整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关    指针自身类型 从语法的角度看，你只要把指针声明语句里的一个指针*和名字去掉，">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041void func9(void)&amp;#123;	int time &#x3D; 0 , dis &#x3D; 0 , mode &#x3D; 0;	double sum &#x3D; 0, km &#x3D; 0, qblc &#x3D; 0;	int qbjz &#x3D; 0;	printf(&quot;选择车型：普通">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-17T13:20:48.922Z">
-<meta property="article:modified_time" content="2023-05-17T15:18:38.844Z">
+<meta property="og:image" content="c:\Users\zhulinhui\AppData\Roaming\Typora\typora-user-images\image-20230527164529308.png">
+<meta property="article:published_time" content="2023-05-27T08:45:02.128Z">
+<meta property="article:modified_time" content="2023-05-27T11:34:35.759Z">
 <meta property="article:author" content="zhulinhui123">
-<meta property="article:tag" content="C">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="c:\Users\zhulinhui\AppData\Roaming\Typora\typora-user-images\image-20230527164529308.png">
   
   
   
-  <title>c指针 - Hexo</title>
+  <title>Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="c指针"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -208,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-17 21:20" pubdate>
-          2023年5月17日 晚上
+        <time datetime="2023-05-27 16:45" pubdate>
+          2023年5月27日 下午
         </time>
       </span>
     
@@ -220,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          381 字
+          669 字
         
       </span>
     
@@ -231,7 +232,7 @@
         
         
         
-          4 分钟
+          6 分钟
         
       </span>
     
@@ -269,22 +270,13 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">c指针</h1>
+            <h1 style="display: none"></h1>
             
             
               <div class="markdown-body">
                 
-                <h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h3><h4 id="符号优先级"><a href="#符号优先级" class="headerlink" title="符号优先级"></a>符号优先级</h4><blockquote>
-<p>从变量名开始看, []的优先级大于*</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span>* arr[<span class="hljs-number">4</span>] = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>&#125;; <span class="hljs-comment">//是一个有4个元素的数组，指向4个int型的指针</span><br><span class="hljs-type">int</span> (* arr)[<span class="hljs-number">4</span>]; <span class="hljs-comment">//整体初始化是一个指针，arr++ 相当于二维数组加行，arr++仅仅只取决于4,与后来指向无关</span><br></code></pre></td></tr></table></figure>
-
-
-
-<h4 id="指针自身类型"><a href="#指针自身类型" class="headerlink" title="指针自身类型"></a>指针自身类型</h4><blockquote>
-<p>从语法的角度看，你只要把指针声明语句里的<span class="label label-warning">一个</span><span class="label label-primary">指针*</span>和<span class="label label-primary">名字</span>去掉，剩下的部分就是这个指针的类型：</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs c">(<span class="hljs-number">1</span>)<span class="hljs-type">int</span>* ptr; <span class="hljs-comment">//指针指向类型是int</span><br>(<span class="hljs-number">2</span>)<span class="hljs-type">char</span>* ptr; <span class="hljs-comment">//指针指向类型是char</span><br>(<span class="hljs-number">3</span>)<span class="hljs-type">int</span>** ptr; <span class="hljs-comment">//指针指向类型是int*</span><br>(<span class="hljs-number">4</span>)<span class="hljs-type">int</span> (* ptr)[<span class="hljs-number">3</span>]; <span class="hljs-comment">//指针自身类型为int(*)[3],指针指向类型是int()[3],定义的指针变量指向了int类型数组，数量为3</span><br>(<span class="hljs-number">5</span>)<span class="hljs-type">int</span>* (* ptr)[<span class="hljs-number">4</span>]; <span class="hljs-comment">//指针指向类型是int* ()[4]</span><br></code></pre></td></tr></table></figure>
+                <p><img src="C:\Users\zhulinhui\AppData\Roaming\Typora\typora-user-images\image-20230527164529308.png" srcset="/img/loading.gif" lazyload alt="image-20230527164529308"></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">void</span> <span class="hljs-title function_">func9</span><span class="hljs-params">(<span class="hljs-type">void</span>)</span><br>&#123;<br>	<span class="hljs-type">int</span> time = <span class="hljs-number">0</span> , dis = <span class="hljs-number">0</span> , mode = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">double</span> sum = <span class="hljs-number">0</span>, km = <span class="hljs-number">0</span>, qblc = <span class="hljs-number">0</span>;<br>	<span class="hljs-type">int</span> qbjz = <span class="hljs-number">0</span>;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;选择车型：普通车(1) 中档车(2) 高档车(3):\n&quot;</span>);<br>	scanf_s(<span class="hljs-string">&quot;%d&quot;</span>, &amp;mode);<br>	<span class="hljs-keyword">if</span> (mode == <span class="hljs-number">1</span>)<br>	&#123;<br>		qbjz = <span class="hljs-number">11</span>;<br>		qblc = <span class="hljs-number">3</span>;<br>		km = <span class="hljs-number">2.4</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (mode == <span class="hljs-number">2</span>)<br>	&#123;<br>		qbjz = <span class="hljs-number">11</span>;<br>		qblc = <span class="hljs-number">2.5</span>;<br>		km = <span class="hljs-number">2.9</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (mode == <span class="hljs-number">3</span>)<br>	&#123;<br>		qbjz = <span class="hljs-number">11</span>;<br>		qblc = <span class="hljs-number">2</span>;<br>		km = <span class="hljs-number">2.9</span>;<br>	&#125;<br>	sum = qbjz;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入公里数：\n&quot;</span>);<br>	scanf_s(<span class="hljs-string">&quot;%d&quot;</span>, &amp;dis);<br>	sum += (dis - qblc) * km;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;请输入时间：\n&quot;</span>);<br>	scanf_s(<span class="hljs-string">&quot;%d&quot;</span>, &amp;time);<br>	<span class="hljs-keyword">if</span> (time &gt;= <span class="hljs-number">23</span> || time &lt;= <span class="hljs-number">5</span>)<br>	&#123;<br>		sum += (dis - qblc) * <span class="hljs-number">0.2</span>;<br>	&#125;<br>	<span class="hljs-keyword">if</span> (dis &gt; <span class="hljs-number">20</span>)<br>	&#123;<br>		sum += (dis - qblc) * <span class="hljs-number">0.5</span>;<br>	&#125;<br>	<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;总价为 : %.2lf\n&quot;</span>,sum);<br>&#125;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -294,34 +286,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E8%AF%AD%E6%B3%95/" class="category-chain-item">语法</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/C/">#C</a>
-      
-    </div>
   
 </div>
 
@@ -331,8 +295,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>c指针</div>
-      <div>https://zhulinhui123.github.io/2023/05/17/指针/</div>
+      <div></div>
+      <div>https://zhulinhui123.github.io/2023/05/27/条件语句/</div>
     </div>
     <div class="license-meta">
       
@@ -344,7 +308,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月17日</div>
+          <div>2023年5月27日</div>
         </div>
       
       
@@ -376,18 +340,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/17/c%E5%AE%9E%E7%8E%B0%E5%A4%9A%E6%80%81/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/17/chatgpt%E4%BD%BF%E7%94%A8/" title="chatgpt使用">
-                        <span class="hidden-mobile">chatgpt使用</span>
+                      <a href="/2023/05/27/ros3/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
